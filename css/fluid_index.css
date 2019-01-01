@@ -1,0 +1,182 @@
+@charset "utf-8";
+/* CSS Document */
+html, body{
+  	padding: 0;
+  	margin: 0;
+}
+.page_container {
+  	height: 100%;
+  	width: 100%;
+}
+#index_header {
+  	text-align: center;
+  	vertical-align: middle;
+  	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://www.bakeryandsnacks.com/var/plain_site/storage/images/publications/food-beverage-nutrition/bakeryandsnacks.com/regulation-safety/coles-freshly-baked-claims-false-rules-federal-court-australia/9101085-1-eng-GB/Coles-freshly-baked-claims-false-rules-Federal-Court-Australia.jpg') no-repeat center center fixed;
+  	background-size: 100% 100%; // this does the stretching
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+.background_title {
+  	display: inline-block; // this is to apply the vertical-align of parent
+  	font-family: 'Montserrat', sans-serif;
+  	color: #FFF;
+  	font-size: 72px;
+	margin: 25% 20%;
+	border: #FFF solid 4px;
+	border-radius: 10px;
+	padding: 20px 30px;
+	
+}
+.undertext {
+	font-size: 32px;
+}
+nav {
+	position: relative;
+	margin-bottom: 20px;
+}
+.coolnav {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+	* html #nav ul { /* Target IE6 */
+		display:inline;
+	}
+	*+html #nav ul { /* Target IE7 */
+		display:inline;
+	}
+.coolnav li {
+	margin: 0 5px 10px 0;
+	padding: 0;
+	list-style: none;
+}
+.coolnav a {
+	display: inline-block;
+	min-width: 140px;
+	height: 50px;
+	text-decoration: none;
+	padding: 3px 12px;
+	line-height: 1.2em;
+    border-bottom: solid 2px #000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+	color: #000;
+}
+.coolnav a:hover {
+	color: #FFF;
+	background: #333;
+}
+.coolnav .active a {
+	background: #999;
+	color: #FFF;
+}
+nav.center ul {
+	text-align: center;
+}
+.coolnav li:hover ul a {
+	background: #333;
+	color: #FFF;
+	height: 40px;
+	line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+.coolnav li:hover ul a:hover {
+	background: #19c589;
+	color: #fff;
+}
+/*Hide dropdown links until they are needed*/
+li ul {
+	display: none;
+}
+
+/*Make dropdown links vertical*/
+li ul li {
+	display: block;
+	float: none;
+}
+
+/*Prevent text wrapping*/
+li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+.coolnav li a:hover + .hidden, .hidden:hover {
+	display: block;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: #fff;
+	background: #19c589;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+.footerlink img {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 	0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+	padding: 10px 20px;
+}
+.footerlink a:hover img {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: none ; /* IE6-9 */
+    zoom:1;
+    -webkit-filter: grayscale(0%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+.footerlink, .footerlink2 {
+	text-align: center;
+}
+.footerlink2 a, .footerlink2 {
+	text-decoration: none;
+	color: #666;
+}
+.google_map {
+	padding: 20px 10px;
+}
+.tophomefooter {
+	padding-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+	
+	.coolnav {
+		position: relative;
+		display: none;
+	}
+	.coolnav li {
+		margin-bottom: 1px;
+	}
+	.coolnav li, li a {
+		width: 100%;
+	}
+	.show-menu {
+		display:block;
+	}
+}
