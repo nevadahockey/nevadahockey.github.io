@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+html, body{
+  	padding: 0;
+  	margin: 0;
+}
+#index_header {
+  	text-align: center;
+  	vertical-align: middle;
+  	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('http://www.bakeryandsnacks.com/var/plain_site/storage/images/publications/food-beverage-nutrition/bakeryandsnacks.com/regulation-safety/coles-freshly-baked-claims-false-rules-federal-court-australia/9101085-1-eng-GB/Coles-freshly-baked-claims-false-rules-Federal-Court-Australia.jpg') no-repeat center center fixed;
+  	background-size: 100% 100%; // this does the stretching
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+.background_title {
+  	display: inline-block; // this is to apply the vertical-align of parent
+  	font-family: 'Montserrat', sans-serif;
+  	color: #FFF;
+  	font-size: 72px;
+	margin: 25% 20%;
+	border: #FFF solid 4px;
+	border-radius: 10px;
+	padding: 20px 30px;
+	
+}
+.content_container {
+	width: 100%
+	margin: 10 auto;
+	display:block;
+}
+.content_text {
+	font-size: 32px;
+	width: 50%;
+	position: absolute;
+}
+.coolnav {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	position: sticky;
+	overflow: hidden;
+}
+.coolnav li {
+	float: left;
+}
+.coolnav li a {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 25px 35px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+	color: #000;
+}
+.coolnav a:hover {
+	color: #FFF;
+	background: #333;
+}
+.coolnav .active a {
+	background: #999;
+	color: #FFF;
+}
+.google_map {
+	padding: 20px 10px;
+	margin-left: 50%;
+}
+.footer_container {
+	width: 100%;
+	background-color: #333333;
+}
+.footerlink img {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 	0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+	padding: 10px 20px;
+}
+.footerlink a:hover img {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: none ; /* IE6-9 */
+    zoom:1;
+    -webkit-filter: grayscale(0%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+.footerlink, .footerlink2 {
+	text-align: center;
+}
+.footerlink2 a, .footerlink2 {
+	text-decoration: none;
+	color: #666;
+}
+.tophomefooter {
+	padding-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+	
+	.coolnav {
+		position: relative;
+		display: none;
+	}
+	.coolnav li {
+		margin-bottom: 1px;
+	}
+	.coolnav li, li a {
+		width: 100%;
+	}
+	.show-menu {
+		display:block;
+	}
+}

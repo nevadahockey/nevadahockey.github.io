@@ -6,58 +6,80 @@ html, body{
 }
 .top_header {
 	display: grid;
+	grid-gap: 0;
 	width: 100%;
 	height: 100vh;
 	box-sizing: border-box;
 	grid-template-rows: repeat(10, 1fr);
 	grid-template-columns: repeat(8, 1fr);
-	background-color: #666666;
+	background-color: #FFFFFF;
+	background-image: url(../images/main_header.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-bottom: 2px solid #0E0E4C;
+	margin-bottom: 30px;
+	box-shadow: 0px 10px 10px -5px rgba(0,0,0,.8);  // top right bottom left
 }
+/*
+.top_header::after {
+	content: '';
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100vh;
+ 	background-image: linear-gradient(to top right, rgba(255, 255, 255, 0) 0, #FFF 150%);
+ 	opacity: 0.6;
+}
+*/
 .page_header {
 	display: grid;
 	width: 100%;
 	box-sizing: border-box;
 	grid-template-rows: repeat(1, 1fr);
 	grid-template-columns: repeat(8, 1fr);
-	background-color: #666666;
+	background-color: #FFF;
+	border-bottom: 2px solid black;
+	margin-bottom: 30px;
+	box-shadow: 0px 10px 10px -5px rgba(0,0,0,.8);  // top right bottom left
 }
 .background_title {
-  	display: inline-block; // this is to apply the vertical-align of parent
+  	display: block; // this is to apply the vertical-align of parent
   	font-family: 'Montserrat', sans-serif;
   	color: #FFF;
-  	font-size: 72px;
-	margin: 25% 20%;
-	border: #FFF solid 4px;
-	border-radius: 10px;
-	padding: 20px 30px;
-	
+  	border: 3px solid #0E0E4C;
+  	border-radius: 10px;
+  	margin: -7px 0 0 -7px; // top right bottom left
 }
 .super_title {
-	grid-row: 2;
-	grid-column: 6 / 8;
+	grid-row: 1;
+	grid-column: 1;
 }
 .bar_header {
 	padding: 20px;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 32px;
-	grid-row: 9 / 11;
+	grid-row: 10;
 	grid-column: 1 / 5;
 	background-color: #FFF;
+	color: #0E0E4C;
+	text-shadow: -3px 3px #B3B3B3;
 }
 .hhome {
-	grid-row: 9 / 11;
+	grid-row: 10;
 	grid-column: 5;
 }
 .hmerch {
-	grid-row: 9 / 11;
+	grid-row: 10;
 	grid-column: 6;
 }
 .hschedule {
-	grid-row: 9 / 11;
+	grid-row: 10;
 	grid-column: 7;
 }
 .hcontact {
-	grid-row: 9 / 11;
+	grid-row: 10;
 	grid-column: 8;
 }
 .bar_page_header {
@@ -67,6 +89,8 @@ html, body{
 	grid-row: 1;
 	grid-column: 1 / 5;
 	background-color: #FFF;
+	color: #0E0E4C;
+	text-shadow: -3px 3px #B3B3B3;
 }
 .phome {
 	grid-row: 1;
@@ -84,6 +108,16 @@ html, body{
 	grid-row: 1;
 	grid-column: 8;
 }
+.invalid_link a {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 1.5em 35px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color: #111;
+	background: #FFF;
+}
 .h_link {
 	background: #FFF;
 }
@@ -94,7 +128,7 @@ html, body{
 	padding: 1.5em 35px;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 20px;
-	color: #000;
+	color: #111;
 	background: #FFF;
 }
 .h_link a:hover {
@@ -106,7 +140,7 @@ html, body{
 #g_container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-gap: 10px;
+	grid-gap: 20px;
 	grid-template-areas:
 		'text map'
 		'footer1 footer1'
@@ -115,14 +149,75 @@ html, body{
 	justify-content: center;
 	margin: 0 auto;
 }
+#p_container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	grid-template-areas:
+		'text text'
+		'sub sub'
+		'footer1 footer1'
+		'footer2 footer2';
+	padding: 40px 30px 20px 30px; // top right bottom left
+	justify-content: center;
+	margin: 0 auto;
+}
+#s_container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	grid-template-areas:
+		'text text'
+		'map map'
+		'sched1 sched2'
+		'footer1 footer1'
+		'footer2 footer2';
+	padding: 40px 30px 20px 30px;
+	justify-content: center;
+	margin: 0 auto;
+}
+.sched_list li {
+	//display: inline-block;
+	list-style-type: circle;
+	padding: 10px;
+}
+.p_center {
+	text-align: center;
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+}
 .content_text {
+	padding: 20px 10px;
 	grid-area: text;
-	font-size: 32px;
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+}
+.sub_form {
+	grid-area: sub;
+	overflow: hidden;
+	position: relative;
+}
+.schedule1 {
+	grid-area: sched1;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	padding: 20px 100px;
+}
+.schedule2 {
+	grid-area: sched2;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	padding: 20px 100px;
+}
+.map_rest {
+	width: 50%;
+	margin: 0 auto;
 }
 .google_map {
 	grid-area: map;
 	overflow: hidden;
 	position: relative;
+	height: 450px;
 }
 .google_map > iframe {
 	width: 100%;
@@ -134,15 +229,19 @@ html, body{
 .footerlink1 {
 	grid-area: footer1;
 	text-align: center;
-	padding: 20px;
+	padding: 50px 0 0 0;
 }
 .footerlink2 {
 	grid-area: footer2;
 	text-align: center;
+	color: #666;
 }
-.footerlink2 a, .footerlink2 {
+.footerlink2 a {
 	text-decoration: none;
 	color: #666;
+}
+.footerlink2 a:hover {
+	text-decoration: underline;
 }
 @media screen and (max-width: 1360px) {
 	#g_container {
@@ -151,29 +250,28 @@ html, body{
 			'text map'
 			'footer1 footer1'
 			'footer2 footer2';
-		padding: 10px 20px 20px 20px; // top right bottom left
+		padding: 10px 30px 30px 20px; // top right bottom left
 		justify-content: center;	
-	}
-		
+	}	
 	.bar_header {
-		grid-row: 9 / 10;
-		grid-column: 1 / 9;
+		grid-row: 9;
+		grid-column: 1 / 10;
 		text-align: center;
 	}
 	.hhome {
-		grid-row: 10 / 11;
+		grid-row: 10;
 		grid-column: 1 / 3;
 	}
 	.hmerch {
-		grid-row: 10 / 11;
+		grid-row: 10;
 		grid-column: 3 / 5;
 	}
 	.hschedule {
-		grid-row: 10 / 11;
+		grid-row: 10;
 		grid-column: 5 / 7;
 	}
 	.hcontact {
-		grid-row: 10 / 11;
+		grid-row: 10;
 		grid-column: 7 / 9;
 	}	
 	.bar_page_header {
@@ -197,8 +295,14 @@ html, body{
 		grid-row: 2;
 		grid-column: 7 / 9;
 	}
+	.map_rest {
+		width: 60%;
+	}
 }
 @media screen and (max-width: 1000px) {
+	.schedule1, .schedule2 {
+		padding: 10px 50px;
+	}
 	#g_container {
 		display: grid;
 		grid-template-areas:
@@ -206,11 +310,23 @@ html, body{
 			'map map'
 			'footer1 footer1'
 			'footer2 footer2';
-		padding: 10px 20px 20px 20px; // top right bottom left
+		padding: 30px 30px 30px 20px; // top right bottom left
 		justify-content: center;	
+	}
+	#s_container {
+		grid-template-areas:
+			'text text'
+			'map map'
+			'sched1 sched1'
+			'sched2 sched2'
+			'footer1 footer1'
+			'footer2 footer2';
 	}
 	.super_title {
 		display: none;
+	}
+	.top_header {
+		background-image: url(../images/main_logo_ipad.png)
 	}
 	.bar_header {
 		grid-row: 9 / 10;
@@ -253,10 +369,16 @@ html, body{
 	.pcontact {
 		grid-row: 2;
 		grid-column: 7 / 9;
+	}
+	.map_rest {
+		width: 70%;
 	}
 }
 
 @media screen and (max-width: 600px) {
+	.schedule1, .schedule2 {
+		padding: 10px 30px;
+	}
 	#g_container {
 		display: grid;
 		grid-template-areas:
@@ -267,29 +389,40 @@ html, body{
 		padding: 10px 20px 20px 20px; // top right bottom left
 		justify-content: center;	
 	}
-	
+	#s_container {
+		grid-template-areas:
+			'text text'
+			'map map'
+			'sched1 sched1'
+			'sched2 sched2'
+			'footer1 footer1'
+			'footer2 footer2';
+	}
+	.top_header {
+		background-image: url(../images/main_logo_phone.png)
+	}
 	.super_title {
 		display: none;
 	}	
 	.bar_header {
-		grid-row: 7 / 8;
+		grid-row: 8 / 9;
 		grid-column: 1 / 9;
 		text-align: center;
 	}
 	.hhome {
-		grid-row: 8 / 9;
+		grid-row: 9 / 10;
 		grid-column: 1 / 5;
 	}
 	.hmerch {
-		grid-row: 8 / 9;
+		grid-row: 9 / 10;
 		grid-column: 5 / 9;
 	}
 	.hschedule {
-		grid-row: 9 / 11;
+		grid-row: 10 / 11;
 		grid-column: 1 / 5;
 	}
 	.hcontact {
-		grid-row: 9 / 11;
+		grid-row: 10 / 11;
 		grid-column: 5 / 9;
 	}
 	.bar_page_header {
@@ -312,9 +445,15 @@ html, body{
 	.pcontact {
 		grid-row: 3;
 		grid-column: 5 / 9;
+	}
+	.map_rest {
+		width: 80%;
 	}	
 }
 @media screen and (max-width: 300px) {
+	.schedule1, .schedule2 {
+		padding: 10px 10px;
+	}
 	#g_container {
 		display: grid;
 		grid-template-areas:
@@ -324,6 +463,15 @@ html, body{
 			'footer2 footer2';
 		padding: 10px 20px 20px 20px; // top right bottom left
 		justify-content: center;	
+	}
+	#s_container {
+		grid-template-areas:
+			'text text'
+			'map map'
+			'sched1 sched1'
+			'sched2 sched2'
+			'footer1 footer1'
+			'footer2 footer2';
 	}
 	
 	.super_title {
@@ -371,5 +519,8 @@ html, body{
 		grid-row: 5;
 		grid-column: 1 / 9;
 	}	
+	.map_rest {
+		width: 90%;
+	}
 }
 
