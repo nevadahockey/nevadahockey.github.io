@@ -511,7 +511,9 @@ html, body{
 			'footer1 footer1'
 			'footer2 footer2';
 	}
-	
+	.top_header {
+		background-image: url(../images/main_logo_phone.png)
+	}
 	.super_title {
 		display: none;
 	}	
