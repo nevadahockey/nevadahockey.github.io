@@ -40,7 +40,7 @@ html, body{
 	grid-template-rows: repeat(1, 1fr);
 	grid-template-columns: repeat(8, 1fr);
 	background-color: #FFF;
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid #0E0E4C;
 	margin-bottom: 30px;
 	box-shadow: 0px 10px 10px -5px rgba(0,0,0,.8);  // top right bottom left
 }
@@ -64,7 +64,7 @@ html, body{
 	grid-column: 1 / 5;
 	background-color: #FFF;
 	color: #0E0E4C;
-	text-shadow: -3px 3px #B3B3B3;
+	text-shadow: -2px 2px #B3B3B3;
 }
 .hhome {
 	grid-row: 10;
@@ -90,7 +90,7 @@ html, body{
 	grid-column: 1 / 5;
 	background-color: #FFF;
 	color: #0E0E4C;
-	text-shadow: -3px 3px #B3B3B3;
+	text-shadow: -2px 2px #B3B3B3;
 }
 .phome {
 	grid-row: 1;
@@ -154,8 +154,7 @@ html, body{
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 20px;
 	grid-template-areas:
-		'text text'
-		'sub sub'
+		'text sub'
 		'footer1 footer1'
 		'footer2 footer2';
 	padding: 40px 30px 20px 30px; // top right bottom left
@@ -181,10 +180,16 @@ html, body{
 	list-style-type: circle;
 	padding: 10px;
 }
+.c_tab {
+	display: table;
+	margin: 0 50px;
+}
 .p_center {
-	text-align: center;
-	font-size: 18px;
-	font-family: 'Montserrat', sans-serif;
+	text-align: center
+}
+.c_align {
+	display: table-cell;
+	vertical-align: middle;
 }
 .content_text {
 	padding: 20px 10px;
@@ -313,6 +318,14 @@ html, body{
 		padding: 30px 30px 30px 20px; // top right bottom left
 		justify-content: center;	
 	}
+	#p_container {
+		display: grid;
+		grid-template-areas:
+			'text text'
+			'sub sub'
+			'footer1 footer1'
+			'footer2 footer2';
+	}
 	#s_container {
 		grid-template-areas:
 			'text text'
@@ -373,6 +386,9 @@ html, body{
 	.map_rest {
 		width: 70%;
 	}
+	.content_text {
+		padding: 10px 10px;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -388,6 +404,14 @@ html, body{
 			'footer2 footer2';
 		padding: 10px 20px 20px 20px; // top right bottom left
 		justify-content: center;	
+	}
+	#p_container {
+		display: grid;
+		grid-template-areas:
+			'text text'
+			'sub sub'
+			'footer1 footer1'
+			'footer2 footer2';
 	}
 	#s_container {
 		grid-template-areas:
@@ -449,6 +473,12 @@ html, body{
 	.map_rest {
 		width: 80%;
 	}	
+	.c_tab {
+		margin: 0;
+	}
+	.content_text {
+		padding: 10px 10px;
+	}
 }
 @media screen and (max-width: 300px) {
 	.schedule1, .schedule2 {
@@ -463,6 +493,14 @@ html, body{
 			'footer2 footer2';
 		padding: 10px 20px 20px 20px; // top right bottom left
 		justify-content: center;	
+	}
+	#p_container {
+		display: grid;
+		grid-template-areas:
+			'text text'
+			'sub sub'
+			'footer1 footer1'
+			'footer2 footer2';
 	}
 	#s_container {
 		grid-template-areas:
@@ -521,6 +559,12 @@ html, body{
 	}	
 	.map_rest {
 		width: 90%;
+	}
+	.c_tab {
+		margin: 0;
+	}
+	.content_text {
+		padding: 10px 10px;
 	}
 }
 
