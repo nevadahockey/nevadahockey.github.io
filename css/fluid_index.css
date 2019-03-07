@@ -57,10 +57,9 @@ html, body{
 	grid-column: 1;
 }
 .bar_header {
-	padding: 20px;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 32px;
 	grid-row: 10;
+	padding: 0 20px;
 	grid-column: 1 / 5;
 	background-color: #FFF;
 	color: #0E0E4C;
