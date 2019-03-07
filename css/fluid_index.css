@@ -65,6 +65,10 @@ html, body{
 	color: #0E0E4C;
 	text-shadow: -2px 2px #B3B3B3;
 }
+.bar_header h1 {
+	font-size: 30px;
+}
+
 .hhome {
 	grid-row: 10;
 	grid-column: 5;
