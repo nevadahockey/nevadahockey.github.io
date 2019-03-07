@@ -86,14 +86,16 @@ html, body{
 	grid-column: 8;
 }
 .bar_page_header {
-	padding: 20px;
+	padding: 0 20px;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 32px;
 	grid-row: 1;
 	grid-column: 1 / 5;
 	background-color: #FFF;
 	color: #0E0E4C;
 	text-shadow: -2px 2px #B3B3B3;
+}
+.bar_page_header h1 {
+	font-size: 30px;	
 }
 .phome {
 	grid-row: 1;
